@@ -3,7 +3,7 @@ import ReactDOMClient from "react-dom/client"
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css"
 // Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min"
+// import "bootstrap/dist/js/bootstrap.bundle.min"
 // Import stylesheet
 import './styles.css'
 import App from "./App"
