@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 // Bootstrap Bundle JS
 // import "bootstrap/dist/js/bootstrap.bundle.min"
 // Import stylesheet
+
 import './styles.css'
 import App from "./App"
 

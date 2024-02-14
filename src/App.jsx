@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from "./components/header";
 import MainSlider from "./components/main-slider";
 import Services from './components/services';
-// import Footer from './components/footer';
 import Bottom from './components/bottom';
 import Newsletter from './components/newsletter';
 import Products from './components/products';
@@ -15,13 +14,16 @@ import products from './helper/products';
 class App extends Component {
     state = { 
         items: [],
-        showCart: true
+        showCart: false
     }
 
+
+    clearCart = () => {
+        this.setState({ items: [] });
+    };
+
     openCart = () => {
-        if (this.state.items.length > 0) {
-            this.setState({ showCart: true });
-        }
+        this.setState({ showCart: true });
     }
 
     closeCart = () => {
@@ -82,7 +84,9 @@ class App extends Component {
 
     render() { 
         return <React.Fragment>
-        <Header />
+        <Header 
+         openCart={this.openCart}
+         noOfCartItems={this.state.items.length}/>
         <MainSlider />
         <Services />
 
@@ -90,10 +94,10 @@ class App extends Component {
             <div className="container">
                 <div className="row">
                     <div class="display-header d-flex justify-content-between pb-3">
-                        <h2 class="display-7 text-dark text-uppercase">Products</h2>
+                        <h2 class="display-7 text-dark text-uppercase">Cups</h2>
                     </div>
                 
-                    <div className='d-flex no-padding'>
+                    <div className='row d-flex no-padding'>
 
                     {/* Get data from products helper database and import them to the Products component */}
                     {products.map((product) => (
@@ -110,19 +114,20 @@ class App extends Component {
             </div>
         </section>
         
-        <Banner />
         <Testimonial />
+        <Banner />
         <Newsletter />
         <Footer />
         <Bottom />
 
         <ShoppingCart 
         items={this.state.items} 
-        show={this.state.items.length > 0 && this.state.showCart} 
+        show={this.state.showCart} 
         onHide={this.closeCart}
         products={products}
         onIncrease={this.increaseItemQuantity}
-        onDecrease={this.decreaseItemQuantity}/>
+        onDecrease={this.decreaseItemQuantity}
+        onClearCart={this.clearCart}/>
         
         </React.Fragment>;
     }

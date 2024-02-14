@@ -1,31 +1,41 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-// import '../styles.css'
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 class MainSlider extends Component {
     state = {  } 
     render() { 
         return (
             <Carousel fade>
+              {/* Carousel item 1 */}
               <Carousel.Item>
-              <div class="d-block w-100 slide bg-light d-flex justify-content-end align-items-center px-5" alt="First slide">
-                <Carousel.Caption className='d-flex flex-column align-items-start text-dark h-75'>
-                  <h2>Technology hack you won't get</h2>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <div class="d-block w-100 slide main-slide bg-light d-flex justify-content-end align-items-center px-5" alt="First slide">
+                <Carousel.Caption className='d-flex flex-column align-items-start text-light h-75 col-6 text-dark'>
+                  <h2 className='display-2'>Make today great</h2>
+                  <p className="display-6">With our themed coffee cips</p>
+                  <a href="#products" className='btn btn-dark text-uppercase px-4 py-2'>Shop now</a>
                 </Carousel.Caption>
-                <img src="/assets/img/product0.png" className='max500' />
+                <div className="d-flex justify-content-center col-6">
+                  <img src="/assets/img/product00bg.png" className='max500' alt='product' />
+                </div>
+                
               </div>
               </Carousel.Item>
-              {/* <Carousel.Item>
-              <div class="d-block w-100 slide" style={{backgroundColor: "red"}} alt="First slide">
-              <Carousel.Caption>
-              <img src="/assets/img/product1.jpg" alt="" />
-                  <h2>Second slide label</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+               {/* Carousel item 2 */}
+               <Carousel.Item>
+              <div class="d-block w-100 slide main-slide bg-dark d-flex justify-content-end align-items-center px-5" alt="First slide">
+                <Carousel.Caption className='d-flex flex-column align-items-start text-light h-75 col-6'>
+                  <h2 className='display-2'>Home sweet home</h2>
+                  <p className="display-6">Get yourself one of our themed cups</p>
+                  <a href="#products" className='btn btn-secondary text-uppercase px-4 py-2'>Discover now</a>
                 </Carousel.Caption>
+                <div className="d-flex justify-content-center col-6">
+                  <img alt="product" src="/assets/img/product00bg.png" className='max500' />
+                </div>
+                
               </div>
-              </Carousel.Item> */}
+              </Carousel.Item>
+
             </Carousel>
 
     // <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
