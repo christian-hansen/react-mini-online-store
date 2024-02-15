@@ -43,7 +43,7 @@ class ShoppingCart extends Component {
                   </div>
               </div>
                   );
-              })};
+              })}
           </div>
 
           {this.props.items.length > 0 && (
