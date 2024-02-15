@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.minh-600 {
+  min-height: 600px;
+}
+
 .width936 {
     width: 936px;
 }
@@ -125,6 +129,27 @@ html {
   .padding-xlarge {
     padding-top: 9.5em;
     padding-bottom: 9.5em;
+  }
+
+  .padding-x-xsmall {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .padding-x-small {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .padding-x-medium {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .padding-x-large {
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+  .padding-x-xlarge {
+    padding-left: 9.5em;
+    padding-right: 9.5em;
   }
   
   /* no padding */
@@ -407,10 +432,65 @@ html {
     width: 40px; height: 40px;
   }
 
+  .total-cost {
+    font-size: 1.25rem;
+    /* text-align: center; */
+    font-weight: 400;
+  }
+
   
   /* 2. Main-Slider
   /*----------------------------------------------*/
+  .carousel-caption {
+    position: unset !important;
+    text-align: left;
+    /* align-items: center !important; */
+  }
+
+  .carousel-slide {
+    width: 1320px;
+  }
+
+  @media (max-width: 767px) {
+    .main-slide {
+      /* display: flex !important; */
+      flex-direction: column !important;
+    }
+
+    .carousel-slide {
+      width: unset;
+    }
+    
+    .carousel-caption {
+      text-align: center;
+      position: unset !important;
+      align-items: center !important;
+      /* padding-bottom: 48px; */
+    }
   
+    .carousel-img {
+      align-items: center !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+.carousel-slide {
+  flex-direction: column-reverse;
+}
+
+.carousel-caption {
+  width: 100%;
+}
+
+.carousel-margin {
+  margin-bottom: 48px;
+}
+
+.carousel-img {
+  justify-content: center !important;
+  margin-left: 30px;
+}
+  }
   
   /* 3. Services
   /*----------------------------------------------*/
@@ -465,44 +545,31 @@ html {
 
   .product-width225-margin20 {
     width: 225px; margin-right: 20px;
-  } */
+  } 
   
     
   /* 5. Testimonial
   /*----------------------------------------------*/
+
+  .quote {
+    fill: var(--light-blue-color) !important;
+  }
+
   .review-item blockquote {
       font-size: 2.5em;
       font-weight: 300;
       line-height: 1.2;
+      padding: 0 56px;
   }
   .rating svg.star {
       width: 16px;
       height: 16px;
       fill: var(--primary-color);
   }
-  #testimonials .swiper-arrow svg {
-      width: 45px;
-      height: 45px;
-      fill: var(--light-gray-color);
-  }
-  .review-content .swiper-arrow {
-      top: 0;
-      bottom: 0;
-      z-index: 2;
-  }
-  .review-content .swiper-arrow.swiper-arrow-next {
-      right: 0;
-  }
-  .review-content .quotation svg.quote {
-      color: var(--light-blue-color);
-  }
   
   @media only screen and (max-width: 767px) {
-    #testimonials blockquote {
+    .review-item blockquote {
         font-size: 2em;
-    }
-    .review-content .swiper-arrow {
-        bottom: -420px;
     }
   }
   
@@ -558,6 +625,10 @@ html {
     justify-content: flex-start !important;
   }
 
+  .p-bottom {
+    padding: 1rem 0 !important;
+  }
+
   .store-top-logo-cart {
     display: flex;
     justify-content: space-between;
@@ -566,19 +637,17 @@ html {
   }
 
   .store-top-desktop {
-display: none !important;
-  }
-
-  .main-slide {
-    /* display: flex !important; */
-    flex-direction: column !important;
-  }
-
-  .carousel-caption {
-    position: unset !important;
+    display: none !important;
   }
 
   .max500 {
-    height: 300px;
+    height: 240px;
   }
-}
+  }
+
+  @media (max-width: 1750px) {
+    .padding-mobile-small {
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+    }
+  }

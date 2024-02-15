@@ -18,7 +18,7 @@ class Newsletter extends Component {
                 <form class="subscription-form validate">
                   <div class="input-group flex-wrap">
                     <input class="form-control btn-rounded-none" type="email" name="EMAIL" placeholder="Your email address here" required=""/>
-                    <button class="btn btn-medium btn-secondary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
+                    <button class="btn btn-medium btn-primary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
                   </div>
                 </form>
               </div>

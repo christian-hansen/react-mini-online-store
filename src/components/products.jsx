@@ -36,7 +36,7 @@ class Products extends Component {
             <div className='d-flex no-padding'>
 
 
-                <div class="slide col-3 p-4">
+                <div class=" col-3 p-4">
                     <div class="product-card position-relative">
                         <div class="image-holder">
                             <img src="/assets/img/product1.jpg" alt="product-item" class="img-fluid" />

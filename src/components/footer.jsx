@@ -68,7 +68,7 @@ class Footer extends Component {
                       <a href="#products">Products</a>
                     </li>
                     <li className="menu-item pb-2">
-                      <a href="#testimonials">Reviews</a>
+                      <a href="#testimonials">Testimonials</a>
                     </li>
                     <li className="menu-item pb-2">
                       <a href="#sale">Seasonal</a>

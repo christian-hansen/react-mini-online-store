@@ -21,7 +21,7 @@ class ShoppingCart extends Component {
       return (  
         <Offcanvas show={this.props.show} onHide={this.props.onHide} placement="end">
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title><h2>Your Cart</h2></Offcanvas.Title>
+            <Offcanvas.Title><h3>Your Cart</h3></Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
           <div className="shopping-cart">
@@ -34,11 +34,11 @@ class ShoppingCart extends Component {
                     <div className='product-title h3'>{product.title}</div>
                     <div className="h6">Price: {item.price}€</div>
                     <div className="d-flex flex-column gap-2">
-                      <div className='d-flex'>
+                      <div className='d-flex mb-1'>
                         <button className='btn-cart btn btn-dark border' onClick={() => this.props.onIncrease(item.id)}>+</button>
                         <div className='amount border btn-cart d-flex align-items-center justify-content-center'>{item.amount}</div>
                         <button className='btn-cart btn btn-light border' onClick={() => this.props.onDecrease(item.id)}>-</button></div>
-                      <div className='h5'>Total: {(product.price * item.amount).toFixed(2)} €</div>
+                      <div className='h6'><strong>Total: {(product.price * item.amount).toFixed(2)} €</strong></div>
                     </div>
                   </div>
               </div>
@@ -47,10 +47,20 @@ class ShoppingCart extends Component {
 
 
           </div>
-          <div className="checkout-container position-relative bottom mt-2 py-4 px-3">
-           <div className='lead display-6 py-3'><strong>Total: {this.calculateTotal()}€</strong></div>
-           <button className='btn btn-dark border w-100' onClick={this.props.onClearCart}>Checkout</button>
-          </div>
+
+          {this.props.items.length > 0 && (
+            <div className="checkout-container position-relative bottom mt-2 py-4 px-3">
+              <div className='lead total-cost py-2'>Cart total: {this.calculateTotal()}€</div>
+              <button className='btn btn-dark border w-100' onClick={this.props.onClearCart}>Checkout</button>
+            </div>
+          )}
+
+          {this.props.items.length === 0 && (
+            <div className="checkout-container">
+             <div>Your shopping cart is empty. Please go back to <a className='link-primary' href='#products' onClick={this.props.onHide}>Products</a> and add an item to the cart.</div>
+            </div>
+          )}
+
 
           </Offcanvas.Body>
         </Offcanvas>

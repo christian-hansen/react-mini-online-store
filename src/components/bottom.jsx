@@ -9,7 +9,7 @@ class Bottom extends Component {
 
     render() { 
         return (
-        <div className='border-top border-dark w-100 p-3'>
+        <div className='border-top border-dark w-100 p-3 p-bottom'>
             <div className='container'>
                 <div className="row d-flex flex-wrap justify-content-between h-50">
                     <div className="col-md-4 col-sm6">
