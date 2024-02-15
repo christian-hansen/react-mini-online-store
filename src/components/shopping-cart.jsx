@@ -8,14 +8,14 @@ class ShoppingCart extends Component {
     // Helper function to find product details by ID
     findProductById = (productId) => {
       return this.props.products.find(product => product.id === productId);
-  }
+    }
 
-  calculateTotal = () => {
-    const total = this.props.items.reduce((acc, item) => {
-        return acc + (item.price * item.amount);
-    }, 0); // Start accumulating from 0
-    return total.toFixed(2); // Assuming price is a float, returns the total as a string with two decimals
-};
+    calculateTotal = () => {
+      const total = this.props.items.reduce((acc, item) => {
+          return acc + (item.price * item.amount);
+      }, 0); // Start accumulating from 0
+      return total.toFixed(2); 
+    };
 
   render() { 
       return (  
@@ -29,7 +29,7 @@ class ShoppingCart extends Component {
             const product = this.findProductById(item.id);
             return (
               <div key={item.id} className='d-flex gap-4 align-items-center p-3'>
-                <img className="cart-img" src={"/assets/img/" + product.image + ".jpg"}/>
+                <img alt={product.image + " image"} className="cart-img" src={"/assets/img/" + product.image + ".jpg"}/>
                   <div className='product-details-container d-flex flex-column'>
                     <div className='product-title h3'>{product.title}</div>
                     <div className="h6">Price: {item.price}€</div>
@@ -43,9 +43,7 @@ class ShoppingCart extends Component {
                   </div>
               </div>
                   );
-              })}
-
-
+              })};
           </div>
 
           {this.props.items.length > 0 && (

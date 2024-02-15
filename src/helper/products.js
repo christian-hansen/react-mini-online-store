@@ -30,15 +30,7 @@ const products = [
       price: 5.99,
       image: "product04",
       description: "The next generation iPhone 11."
-    },
-    // {
-    //   id: 5,
-    //   title: "iPhone 14",
-    //   price: 980,
-    //   image: "product1",
-    //   description: "The next generation iPhone 11."
-    // },
-    // Add more products as needed
+    }
   ];
   
   export default products;

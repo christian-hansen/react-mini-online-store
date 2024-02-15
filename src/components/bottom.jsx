@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 class Bottom extends Component {
-    state = {
-
-    } 
+    state = { } 
 
     year = new Date().getFullYear();
 
     render() { 
         return (
+        // Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.     
         <div className='border-top border-dark w-100 p-3 p-bottom'>
             <div className='container'>
                 <div className="row d-flex flex-wrap justify-content-between h-50">
